@@ -1,0 +1,710 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pesantren Modern Fajrussalam — Sentul, Bogor</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700;800;900&family=Plus+Jakarta+Sans:wght@200;300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <style>
+      /* ===================================
+           LUXURY CORE DESIGN SYSTEM
+           =================================== */
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      :root {
+        --royal-black: #050b08;
+        --deep-emerald: #082219;
+        --emerald-surface: #0f382a;
+        --gold-gradient: linear-gradient(
+          135deg,
+          #bf953f 0%,
+          #fcf6ba 25%,
+          #b38728 50%,
+          #fbf5b7 75%,
+          #aa771c 100%
+        );
+        --gold-solid: #d4af37;
+        --gold-light: #fef7dc;
+        --text-gold: #e5c158;
+        --text-light: #f1f5f9;
+        --text-muted: #94a3b8;
+        --glass-bg: rgba(8, 34, 25, 0.7);
+        --glass-border: rgba(212, 175, 55, 0.25);
+        --luxury-shadow: 0 30px 60px rgba(0, 0, 0, 0.4);
+      }
+
+      html {
+        scroll-behavior: smooth;
+      }
+
+      body {
+        background-color: var(--royal-black);
+        color: var(--text-light);
+        font-family: "Plus Jakarta Sans", sans-serif;
+        line-height: 1.7;
+        overflow-x: hidden;
+      }
+
+      h1,
+      h2,
+      h3,
+      h4,
+      .brand-font {
+        font-family: "Cinzel", serif;
+        letter-spacing: 1px;
+      }
+
+      a {
+        text-decoration: none;
+        color: inherit;
+      }
+
+      /* Gold Metallic Text Effect */
+      .gold-text {
+        background: var(--gold-gradient);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        display: inline-block;
+      }
+
+      /* ===================================
+           TOP BAR & HEADER
+           =================================== */
+      .topbar {
+        background-color: #020604;
+        color: rgba(241, 245, 249, 0.6);
+        font-size: 0.75rem;
+        letter-spacing: 1px;
+        padding: 10px 8%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border-bottom: 1px solid rgba(212, 175, 55, 0.15);
+        text-transform: uppercase;
+      }
+
+      .topbar-info {
+        display: flex;
+        gap: 25px;
+      }
+
+      header {
+        background: rgba(5, 11, 8, 0.85);
+        backdrop-filter: blur(20px);
+        border-bottom: 1px solid var(--glass-border);
+        padding: 1.2rem 8%;
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+      }
+
+      .brand-logo {
+        display: flex;
+        align-items: center;
+        gap: 15px;
+      }
+
+      .logo-emblem {
+        width: 48px;
+        height: 48px;
+        background: radial-gradient(
+          circle,
+          var(--emerald-surface) 0%,
+          var(--royal-black) 100%
+        );
+        border: 1px solid var(--gold-solid);
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: 800;
+        font-size: 1.2rem;
+        box-shadow: 0 0 15px rgba(212, 175, 55, 0.2);
+      }
+
+      .brand-text h1 {
+        font-size: 1.25rem;
+        font-weight: 800;
+        line-height: 1.1;
+      }
+
+      .brand-text span {
+        font-family: "Plus Jakarta Sans", sans-serif;
+        font-size: 0.68rem;
+        color: var(--text-gold);
+        letter-spacing: 3px;
+        text-transform: uppercase;
+        font-weight: 600;
+        display: block;
+        margin-top: 2px;
+      }
+
+      nav ul {
+        display: flex;
+        list-style: none;
+        gap: 40px;
+        align-items: center;
+      }
+
+      nav a {
+        font-size: 0.85rem;
+        font-weight: 500;
+        letter-spacing: 1.5px;
+        text-transform: uppercase;
+        color: var(--text-light);
+        transition: all 0.3s ease;
+      }
+
+      nav a:hover {
+        color: var(--text-gold);
+      }
+
+      .btn-luxury-nav {
+        background: transparent;
+        border: 1px solid var(--gold-solid);
+        color: var(--gold-light) !important;
+        padding: 10px 24px;
+        border-radius: 2px;
+        font-weight: 600;
+        font-size: 0.8rem;
+        letter-spacing: 2px;
+        transition: all 0.4s ease;
+        position: relative;
+        overflow: hidden;
+      }
+
+      .btn-luxury-nav:hover {
+        background: var(--gold-gradient);
+        color: var(--royal-black) !important;
+        box-shadow: 0 0 20px rgba(212, 175, 55, 0.4);
+      }
+
+      /* ===================================
+           HERO SECTION
+           =================================== */
+      .hero {
+        position: relative;
+        min-height: 92vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        padding: 120px 20px 100px;
+        background:
+          linear-gradient(
+            180deg,
+            rgba(5, 11, 8, 0.75) 0%,
+            rgba(8, 34, 25, 0.92) 100%
+          ),
+          url("https://images.unsplash.com/photo-1541829070764-84a7d30dd3f3?auto=format&fit=crop&w=1800&q=80")
+            center/cover no-repeat;
+      }
+
+      .hero-container {
+        max-width: 1000px;
+        z-index: 2;
+      }
+
+      .hero-badge {
+        border: 1px solid var(--glass-border);
+        background: rgba(212, 175, 55, 0.08);
+        color: var(--gold-light);
+        padding: 8px 28px;
+        border-radius: 50px;
+        font-size: 0.75rem;
+        font-weight: 600;
+        letter-spacing: 3px;
+        text-transform: uppercase;
+        display: inline-block;
+        margin-bottom: 30px;
+        backdrop-filter: blur(10px);
+      }
+
+      .hero h2 {
+        font-size: 4rem;
+        line-height: 1.15;
+        margin-bottom: 25px;
+        font-weight: 800;
+      }
+
+      .hero p {
+        font-size: 1.2rem;
+        color: var(--text-muted);
+        margin-bottom: 50px;
+        font-weight: 300;
+        max-width: 800px;
+        margin-left: auto;
+        margin-right: auto;
+        letter-spacing: 0.5px;
+      }
+
+      .hero-btns {
+        display: flex;
+        gap: 20px;
+        justify-content: center;
+        flex-wrap: wrap;
+      }
+
+      .btn-gold-filled {
+        background: var(--gold-gradient);
+        color: var(--royal-black);
+        padding: 18px 42px;
+        border-radius: 2px;
+        font-weight: 800;
+        font-size: 0.85rem;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+        transition: all 0.4s ease;
+        box-shadow: 0 10px 30px rgba(191, 149, 63, 0.3);
+      }
+
+      .btn-gold-filled:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 15px 40px rgba(191, 149, 63, 0.5);
+      }
+
+      .btn-outline-gold {
+        border: 1px solid var(--gold-solid);
+        color: var(--gold-light);
+        padding: 16px 38px;
+        border-radius: 2px;
+        font-weight: 600;
+        font-size: 0.85rem;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+        transition: all 0.4s ease;
+        background: rgba(0, 0, 0, 0.3);
+      }
+
+      .btn-outline-gold:hover {
+        background: rgba(212, 175, 55, 0.15);
+        transform: translateY(-3px);
+      }
+
+      /* ===================================
+           LUXURY STATS BAR
+           =================================== */
+      .stats-bar {
+        background: rgba(8, 34, 25, 0.85);
+        backdrop-filter: blur(20px);
+        margin: -60px auto 0;
+        max-width: 1200px;
+        border-radius: 4px;
+        padding: 45px 50px;
+        box-shadow: var(--luxury-shadow);
+        position: relative;
+        z-index: 10;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+        gap: 30px;
+        text-align: center;
+        border: 1px solid var(--glass-border);
+      }
+
+      .stat-item h3 {
+        font-size: 2.8rem;
+        margin-bottom: 5px;
+        font-weight: 800;
+      }
+
+      .stat-item p {
+        color: var(--text-muted);
+        font-size: 0.8rem;
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+      }
+
+      /* ===================================
+           SECTION STYLES
+           =================================== */
+      section {
+        padding: 110px 8%;
+      }
+
+      .section-header {
+        text-align: center;
+        margin-bottom: 70px;
+      }
+
+      .section-header .sub-title {
+        color: var(--text-gold);
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 3px;
+        font-size: 0.8rem;
+        display: block;
+        margin-bottom: 12px;
+      }
+
+      .section-header h2 {
+        font-size: 2.8rem;
+        color: var(--text-light);
+        margin-bottom: 15px;
+        font-weight: 700;
+      }
+
+      .section-header .divider {
+        width: 80px;
+        height: 2px;
+        background: var(--gold-gradient);
+        margin: 0 auto;
+      }
+
+      /* ===================================
+           CURRICULUM / CARDS
+           =================================== */
+      .grid-cards {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 35px;
+      }
+
+      .luxury-card {
+        background: linear-gradient(
+          145deg,
+          rgba(15, 56, 42, 0.4) 0%,
+          rgba(5, 11, 8, 0.6) 100%
+        );
+        border: 1px solid var(--glass-border);
+        border-radius: 4px;
+        padding: 45px 35px;
+        transition: all 0.4s ease;
+        position: relative;
+        overflow: hidden;
+        backdrop-filter: blur(10px);
+      }
+
+      .luxury-card::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 2px;
+        background: var(--gold-gradient);
+        opacity: 0.5;
+        transition: opacity 0.4s;
+      }
+
+      .luxury-card:hover {
+        transform: translateY(-10px);
+        border-color: var(--gold-solid);
+        box-shadow:
+          0 20px 40px rgba(0, 0, 0, 0.6),
+          0 0 20px rgba(212, 175, 55, 0.15);
+      }
+
+      .luxury-card:hover::before {
+        opacity: 1;
+      }
+
+      .card-number {
+        font-family: "Cinzel", serif;
+        font-size: 2rem;
+        color: var(--text-gold);
+        opacity: 0.4;
+        margin-bottom: 15px;
+        font-weight: 700;
+      }
+
+      .luxury-card h3 {
+        font-size: 1.4rem;
+        color: var(--text-light);
+        margin-bottom: 15px;
+        font-weight: 700;
+      }
+
+      .luxury-card p {
+        color: var(--text-muted);
+        font-size: 0.95rem;
+        line-height: 1.8;
+        font-weight: 300;
+      }
+
+      /* ===================================
+           FOOTER
+           =================================== */
+      footer {
+        background: #020604;
+        color: var(--text-light);
+        padding: 90px 8% 40px;
+        border-top: 1px solid var(--glass-border);
+      }
+
+      .footer-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+        gap: 50px;
+        margin-bottom: 70px;
+      }
+
+      .footer-col h4 {
+        font-size: 1.1rem;
+        color: var(--text-gold);
+        margin-bottom: 25px;
+        letter-spacing: 2px;
+      }
+
+      .footer-col p,
+      .footer-col li {
+        color: var(--text-muted);
+        font-size: 0.9rem;
+        margin-bottom: 14px;
+        list-style: none;
+        font-weight: 300;
+      }
+
+      .footer-col a:hover {
+        color: var(--gold-light);
+      }
+
+      .footer-bottom {
+        border-top: 1px solid rgba(255, 255, 255, 0.05);
+        padding-top: 35px;
+        text-align: center;
+        font-size: 0.85rem;
+        color: var(--text-muted);
+        letter-spacing: 1px;
+      }
+
+      /* Responsive Layout */
+      @media (max-width: 768px) {
+        .topbar {
+          display: none;
+        }
+        header {
+          flex-direction: column;
+          gap: 20px;
+          padding: 20px;
+        }
+        nav ul {
+          gap: 20px;
+          flex-wrap: wrap;
+          justify-content: center;
+        }
+        .hero h2 {
+          font-size: 2.5rem;
+        }
+        .hero p {
+          font-size: 1rem;
+        }
+        .stats-bar {
+          margin-top: 0;
+          border-radius: 0;
+          padding: 30px 20px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- TOPBAR -->
+    <div class="topbar">
+      <div class="topbar-info">
+        <span>📍 Babakan Madang, Sentul, Kabupaten Bogor</span>
+        <span>📞 (021) 8796-XXX</span>
+      </div>
+      <div>
+        <span>✉️ sekretariat@fajrussalam.ponpes.id</span>
+      </div>
+    </div>
+
+    <!-- NAVBAR -->
+    <header>
+      <div class="brand-logo">
+        <div class="logo-emblem"><span class="gold-text">FS</span></div>
+        <div class="brand-text">
+          <h1>FAJRUSSALAM</h1>
+          <span>MODERN ISLAMIC BOARDING SCHOOL</span>
+        </div>
+      </div>
+      <nav>
+        <ul>
+          <li><a href="#beranda">Beranda</a></li>
+          <li><a href="#program">Pendidikan</a></li>
+          <li><a href="#keunggulan">Keunggulan</a></li>
+          <li>
+            <a
+              href="https://fajrussalam.ponpes.id/"
+              target="_blank"
+              class="btn-luxury-nav"
+              >Portal Resmi</a
+            >
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- HERO SECTION -->
+    <section class="hero" id="beranda">
+      <div class="hero-container">
+        <span class="hero-badge">Center of Islamic Excellence</span>
+        <h2>
+          Membina Generasi Rabbani <br /><span class="gold-text"
+            >Berwawasan Global</span
+          >
+        </h2>
+        <p>
+          Pendidikan Islam modern terpadu di kawasan elit Sentul, Bogor.
+          Memadukan kedalaman ilmu syariah, tradisi hafalan Al-Qur'an, serta
+          kepemimpinan masa depan.
+        </p>
+        <div class="hero-btns">
+          <a
+            href="https://fajrussalam.ponpes.id/"
+            target="_blank"
+            class="btn-gold-filled"
+            >Pendaftaran PPDB</a
+          >
+          <a href="#program" class="btn-outline-gold">Jelajahi Kurikulum</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- LUXURY STATS BAR -->
+    <div class="stats-bar">
+      <div class="stat-item">
+        <h3 class="gold-text">100%</h3>
+        <p>Kurikulum Terpadu</p>
+      </div>
+      <div class="stat-item">
+        <h3 class="gold-text">30 Juz</h3>
+        <p>Target Tahfiz Al-Qur'an</p>
+      </div>
+      <div class="stat-item">
+        <h3 class="gold-text">Bilingual</h3>
+        <p>Arab & Inggris Aktif</p>
+      </div>
+      <div class="stat-item">
+        <h3 class="gold-text">Sentul</h3>
+        <p>Lingkungan Eksklusif</p>
+      </div>
+    </div>
+
+    <!-- PROGRAM PENDIDIKAN -->
+    <section id="program">
+      <div class="section-header">
+        <span class="sub-title">Jenjang Academic</span>
+        <h2>Program Pendidikan Eksklusif</h2>
+        <div class="divider"></div>
+      </div>
+
+      <div class="grid-cards">
+        <div class="luxury-card">
+          <div class="card-number">01</div>
+          <h3>TMTs (Tsanawiyah)</h3>
+          <p>
+            Pendidikan menengah pertama dengan fondasi adab, tahfiz Al-Qur'an,
+            pembiasaan bahasa asing, serta kurikulum sains nasional.
+          </p>
+        </div>
+        <div class="luxury-card">
+          <div class="card-number">02</div>
+          <h3>Madrasah Aliyah (MA)</h3>
+          <p>
+            Pendalaman ilmu syariah, kitab turats, pendalaman riset sains, serta
+            orientasi kelanjutan ke perguruan tinggi bereputasi internasional.
+          </p>
+        </div>
+        <div class="luxury-card">
+          <div class="card-number">03</div>
+          <h3>Tahfiz & Dirasah Islamiyah</h3>
+          <p>
+            Program sertifikasi hafalan Al-Qur'an mutqin dilengkapi pemahaman
+            fiqih, aqidah, dan bahasa Arab komunikasi harian.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- PILAR KEUNGGULAN -->
+    <section
+      style="
+        background: rgba(8, 34, 25, 0.3);
+        border-top: 1px solid var(--glass-border);
+        border-bottom: 1px solid var(--glass-border);
+      "
+      id="keunggulan"
+    >
+      <div class="section-header">
+        <span class="sub-title">Keunggulan Utama</span>
+        <h2>Pilar Kehormatan Pesantren</h2>
+        <div class="divider"></div>
+      </div>
+
+      <div class="grid-cards">
+        <div class="luxury-card">
+          <h3>Integritas Moral & Akhlak</h3>
+          <p>
+            Pembentukan karakter santri berbudi pekerti tinggi melalui sistem
+            pengasuhan 24 jam penuh keteladanan.
+          </p>
+        </div>
+        <div class="luxury-card">
+          <h3>Fasilitas Modern & Asri</h3>
+          <p>
+            Kampus berada di kawasan Sentul yang sejuk, tenang, dan dilengkapi
+            sarana pembelajaran modern berstandar tinggi.
+          </p>
+        </div>
+        <div class="luxury-card">
+          <h3>Jiwa Kepemimpinan</h3>
+          <p>
+            Pelatihan manajemen, keorganisasian santri, dan *public speaking*
+            untuk melahirkan pemimpin masa depan.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+      <div class="footer-grid">
+        <div class="footer-col">
+          <h4 class="gold-text">FAJRUSSALAM</h4>
+          <p>
+            Pondok Pesantren Modern Fajrussalam Sentul merupakan lembaga
+            pendidikan Islam unggulan yang berdedikasi melahirkan santri Rabbani
+            berintegritas tinggi.
+          </p>
+        </div>
+        <div class="footer-col">
+          <h4>Navigasi Utama</h4>
+          <ul>
+            <li><a href="#beranda">Beranda</a></li>
+            <li><a href="#program">Program Pendidikan</a></li>
+            <li><a href="#keunggulan">Keunggulan Kampus</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Lokasi & Kontak</h4>
+          <p>Kecamatan Babakan Madang, Sentul, Kabupaten Bogor, Jawa Barat</p>
+          <p>Email: info@fajrussalam.ponpes.id</p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>
+          &copy; 2026
+          <span class="gold-text">Pesantren Modern Fajrussalam</span> — Sentul,
+          Kabupaten Bogor. All Rights Reserved.
+        </p>
+      </div>
+    </footer>
+  </body>
+</html>
