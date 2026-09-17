@@ -1,0 +1,500 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Darunnajah 2 Cipining — Royal Islamic Boarding School</title>
+
+    <!-- Premium Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600&display=swap"
+      rel="stylesheet"
+    />
+
+    <style>
+      /* ===================================
+           LUXURY COLOR PALETTE & VARIABLES
+           =================================== */
+      :root {
+        --gold-primary: #d4af37;
+        --gold-light: #f3e5ab;
+        --gold-gradient: linear-gradient(
+          135deg,
+          #bf953f 0%,
+          #fcf6ba 25%,
+          #b38728 50%,
+          #fbf5b7 75%,
+          #aa771c 100%
+        );
+        --gold-glow: 0 0 25px rgba(212, 175, 55, 0.3);
+
+        --bg-dark: #0a0d0f;
+        --bg-card: #12171a;
+        --bg-card-hover: #1a2126;
+
+        --text-gold: #e6c875;
+        --text-light: #e2e8f0;
+        --text-muted: #94a3b8;
+
+        --border-gold: rgba(212, 175, 55, 0.25);
+        --border-gold-strong: rgba(212, 175, 55, 0.6);
+      }
+
+      /* ===================================
+           RESET & BASE STYLES
+           =================================== */
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        background-color: var(--bg-dark);
+        color: var(--text-light);
+        font-family: "Plus Jakarta Sans", sans-serif;
+        line-height: 1.7;
+        overflow-x: hidden;
+      }
+
+      h1,
+      h2,
+      h3,
+      .royal-font {
+        font-family: "Cinzel", serif;
+        letter-spacing: 1.5px;
+      }
+
+      a {
+        text-decoration: none;
+        color: inherit;
+      }
+
+      /* ===================================
+           HEADER & NAVIGATION
+           =================================== */
+      header {
+        background: rgba(10, 13, 15, 0.85);
+        backdrop-filter: blur(12px);
+        -webkit-backdrop-filter: blur(12px);
+        border-bottom: 1px solid var(--border-gold);
+        padding: 1.2rem 8%;
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      .brand-logo {
+        display: flex;
+        align-items: center;
+        gap: 15px;
+      }
+
+      .logo-emblem {
+        width: 45px;
+        height: 45px;
+        border: 1px solid var(--gold-primary);
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: radial-gradient(
+          circle,
+          rgba(212, 175, 55, 0.15) 0%,
+          rgba(0, 0, 0, 0) 70%
+        );
+        box-shadow: var(--gold-glow);
+        font-family: "Cinzel", serif;
+        font-weight: 700;
+        color: var(--gold-primary);
+        font-size: 1.1rem;
+      }
+
+      .brand-title {
+        font-size: 1.15rem;
+        font-weight: 700;
+        color: var(--text-light);
+      }
+
+      .brand-title span {
+        background: var(--gold-gradient);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        display: block;
+        font-size: 0.75rem;
+        letter-spacing: 3px;
+      }
+
+      nav ul {
+        display: flex;
+        list-style: none;
+        gap: 35px;
+        align-items: center;
+      }
+
+      nav a {
+        font-size: 0.85rem;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        color: var(--text-muted);
+        transition: all 0.3s ease;
+      }
+
+      nav a:hover {
+        color: var(--gold-primary);
+      }
+
+      .btn-portal {
+        border: 1px solid var(--gold-primary);
+        padding: 10px 24px;
+        border-radius: 2px;
+        color: var(--gold-primary) !important;
+        font-weight: 600;
+        background: rgba(212, 175, 55, 0.05);
+        transition: all 0.4s ease !important;
+      }
+
+      .btn-portal:hover {
+        background: var(--gold-gradient);
+        color: var(--bg-dark) !important;
+        box-shadow: var(--gold-glow);
+      }
+
+      /* ===================================
+           HERO SECTION
+           =================================== */
+      .hero {
+        position: relative;
+        min-height: 90vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        padding: 80px 20px;
+        background:
+          radial-gradient(
+            circle at center,
+            rgba(18, 23, 26, 0.5) 0%,
+            var(--bg-dark) 90%
+          ),
+          url("https://images.unsplash.com/photo-1541829070764-84a7d30dd3f3?auto=format&fit=crop&w=1600&q=80")
+            center/cover no-repeat;
+      }
+
+      .hero::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: rgba(10, 13, 15, 0.75);
+        z-index: 1;
+      }
+
+      .hero-content {
+        position: relative;
+        z-index: 2;
+        max-width: 900px;
+      }
+
+      .hero-badge {
+        display: inline-block;
+        border: 1px solid var(--border-gold);
+        padding: 6px 20px;
+        border-radius: 30px;
+        font-size: 0.75rem;
+        text-transform: uppercase;
+        letter-spacing: 3px;
+        color: var(--gold-primary);
+        background: rgba(10, 13, 15, 0.6);
+        margin-bottom: 25px;
+      }
+
+      .hero h1 {
+        font-size: 3.5rem;
+        font-weight: 700;
+        line-height: 1.2;
+        margin-bottom: 25px;
+        background: var(--gold-gradient);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        text-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+      }
+
+      .hero p {
+        font-size: 1.1rem;
+        color: var(--text-muted);
+        max-width: 700px;
+        margin: 0 auto 40px;
+        font-weight: 300;
+      }
+
+      .hero-actions {
+        display: flex;
+        gap: 20px;
+        justify-content: center;
+        flex-wrap: wrap;
+      }
+
+      .btn-gold {
+        background: var(--gold-gradient);
+        color: var(--bg-dark);
+        padding: 16px 36px;
+        font-weight: 700;
+        font-size: 0.85rem;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        border-radius: 2px;
+        transition: all 0.3s ease;
+        box-shadow: var(--gold-glow);
+      }
+
+      .btn-gold:hover {
+        transform: translateY(-3px);
+        filter: brightness(1.1);
+      }
+
+      .btn-luxury-outline {
+        border: 1px solid var(--border-gold);
+        color: var(--text-light);
+        padding: 15px 34px;
+        font-weight: 500;
+        font-size: 0.85rem;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        border-radius: 2px;
+        background: rgba(255, 255, 255, 0.02);
+        transition: all 0.3s ease;
+      }
+
+      .btn-luxury-outline:hover {
+        border-color: var(--gold-primary);
+        color: var(--gold-primary);
+        transform: translateY(-3px);
+      }
+
+      /* ===================================
+           FEATURES / PILLARS SECTION
+           =================================== */
+      .pillars {
+        padding: 100px 8%;
+        position: relative;
+        z-index: 2;
+      }
+
+      .section-header {
+        text-align: center;
+        margin-bottom: 70px;
+      }
+
+      .section-header h2 {
+        font-size: 2.2rem;
+        color: var(--text-light);
+        margin-bottom: 12px;
+      }
+
+      .section-header .divider {
+        width: 80px;
+        height: 2px;
+        background: var(--gold-gradient);
+        margin: 0 auto 15px;
+      }
+
+      .section-header p {
+        color: var(--text-muted);
+        font-size: 0.95rem;
+        letter-spacing: 1px;
+      }
+
+      .grid-pillars {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+        gap: 30px;
+      }
+
+      .card-pillar {
+        background: var(--bg-card);
+        border: 1px solid var(--border-gold);
+        padding: 45px 30px;
+        border-radius: 4px;
+        transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+        position: relative;
+      }
+
+      .card-pillar:hover {
+        background: var(--bg-card-hover);
+        border-color: var(--border-gold-strong);
+        transform: translateY(-10px);
+        box-shadow:
+          0 20px 40px rgba(0, 0, 0, 0.6),
+          var(--gold-glow);
+      }
+
+      .card-number {
+        font-family: "Cinzel", serif;
+        font-size: 2.5rem;
+        font-weight: 700;
+        color: rgba(212, 175, 55, 0.15);
+        position: absolute;
+        top: 20px;
+        right: 25px;
+        transition: color 0.3s;
+      }
+
+      .card-pillar:hover .card-number {
+        color: var(--gold-primary);
+      }
+
+      .card-pillar h3 {
+        font-size: 1.25rem;
+        color: var(--text-gold);
+        margin-bottom: 15px;
+        font-weight: 600;
+      }
+
+      .card-pillar p {
+        font-size: 0.9rem;
+        color: var(--text-muted);
+        line-height: 1.8;
+        font-weight: 300;
+      }
+
+      /* ===================================
+           FOOTER
+           =================================== */
+      footer {
+        background: #060809;
+        border-top: 1px solid var(--border-gold);
+        padding: 40px 20px;
+        text-align: center;
+      }
+
+      footer p {
+        font-size: 0.85rem;
+        color: var(--text-muted);
+        letter-spacing: 1px;
+      }
+
+      footer p span {
+        color: var(--gold-primary);
+      }
+
+      /* Responsive Layout */
+      @media (max-width: 768px) {
+        header {
+          flex-direction: column;
+          gap: 20px;
+        }
+        .hero h1 {
+          font-size: 2.3rem;
+        }
+        .hero p {
+          font-size: 0.95rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- HEADER / NAVIGATION -->
+    <header>
+      <div class="brand-logo">
+        <div class="logo-emblem">DN2</div>
+        <div class="brand-title">
+          DARUNNAJAH 2
+          <span>CIPINING BOGOR</span>
+        </div>
+      </div>
+      <nav>
+        <ul>
+          <li><a href="#beranda">Beranda</a></li>
+          <li><a href="#pilar">Pilar Utama</a></li>
+          <li>
+            <a href="https://darunnajah.com/" target="_blank" class="btn-portal"
+              >Portal Resmi</a
+            >
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- HERO SECTION -->
+    <section class="hero" id="beranda">
+      <div class="hero-content">
+        <div class="hero-badge">Pesantren Modern Eksklusif</div>
+        <h1>Pondok Pesantren Darunnajah 2 Cipining</h1>
+        <p>
+          Dedikasi mulia melahirkan generasi pemimpin dunia yang beriman teguh,
+          berilmu tinggi, serta berakhlak mulia di Cigudeg, Kabupaten Bogor.
+        </p>
+        <div class="hero-actions">
+          <a href="https://darunnajah.com/" target="_blank" class="btn-gold"
+            >Pendaftaran Penerimaan Santri</a
+          >
+          <a href="#pilar" class="btn-luxury-outline">Eksplorasi Keunggulan</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- PILLARS / FEATURES SECTION -->
+    <section class="pillars" id="pilar">
+      <div class="section-header">
+        <h2>Pilar Keunggulan</h2>
+        <div class="divider"></div>
+        <p>
+          Standar pendidikan tinggi yang mengarahkan santri menuju puncak
+          prestasi
+        </p>
+      </div>
+
+      <div class="grid-pillars">
+        <div class="card-pillar">
+          <div class="card-number">01</div>
+          <h3>Kurikulum Internasional</h3>
+          <p>
+            Penggabungan sistem pendidikan keagamaan komprehensif dengan
+            penguasaan Bahasa Arab & Inggris secara fasih dan aktif.
+          </p>
+        </div>
+        <div class="card-pillar">
+          <div class="card-number">02</div>
+          <h3>Karakter & Kemandirian</h3>
+          <p>
+            Sistem pengasuhan 24 jam yang menanamkan disiplin baja, kepemimpinan
+            tinggi, dan jiwa kewirausahaan sejak dini.
+          </p>
+        </div>
+        <div class="card-pillar">
+          <div class="card-number">03</div>
+          <h3>Tahfiz & Studi Islam</h3>
+          <p>
+            Program pendalaman Al-Qur'an dan ilmu syariah yang dibimbing secara
+            intensif oleh para pengajar berpengalaman.
+          </p>
+        </div>
+        <div class="card-pillar">
+          <div class="card-number">04</div>
+          <h3>Kawasan Hijau Eksklusif</h3>
+          <p>
+            Kampus seluas ratusan hektar di Cipining, Bogor yang asri, tenang,
+            dan sangat kondusif untuk konsentrasi belajar.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+      <p>
+        &copy; 2026 <span>Pondok Pesantren Darunnajah 2 Cipining</span> —
+        Cigudeg, Kabupaten Bogor.
+      </p>
+    </footer>
+  </body>
+</html>
