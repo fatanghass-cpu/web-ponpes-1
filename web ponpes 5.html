@@ -1,0 +1,443 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pondok Pesantren Modern Ar-Ridho Sentul - Bogor</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Playfair+Display:wght@600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <style>
+      /* ===================================
+           RESET & CORE VARIABLES
+           =================================== */
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      :root {
+        --primary-emerald: #0b4f3a;
+        --emerald-light: #167a5b;
+        --mint-bg: #f2f8f5;
+        --gold-accent: #c89d36;
+        --gold-light: #fef9ed;
+        --dark-color: #17211e;
+        --text-muted: #576561;
+        --white: #ffffff;
+        --card-shadow: 0 10px 30px rgba(11, 79, 58, 0.08);
+      }
+
+      body {
+        background-color: #fafdfc;
+        color: var(--dark-color);
+        font-family: "Outfit", sans-serif;
+        line-height: 1.6;
+        overflow-x: hidden;
+      }
+
+      h1,
+      h2,
+      h3 {
+        font-family: "Playfair Display", serif;
+      }
+
+      a {
+        text-decoration: none;
+        color: inherit;
+      }
+
+      /* ===================================
+           NAVIGATION
+           =================================== */
+      header {
+        background: rgba(255, 255, 255, 0.95);
+        backdrop-filter: blur(10px);
+        border-bottom: 1px solid rgba(11, 79, 58, 0.1);
+        padding: 1rem 7%;
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        box-shadow: 0 2px 15px rgba(0, 0, 0, 0.03);
+      }
+
+      .brand {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+      }
+
+      .brand-logo {
+        width: 42px;
+        height: 42px;
+        background: var(--primary-emerald);
+        color: var(--gold-accent);
+        border-radius: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: 700;
+        font-size: 1.2rem;
+        font-family: "Playfair Display", serif;
+      }
+
+      .brand-text h1 {
+        font-size: 1.15rem;
+        color: var(--primary-emerald);
+        line-height: 1.2;
+      }
+
+      .brand-text span {
+        font-family: "Outfit", sans-serif;
+        font-size: 0.75rem;
+        color: var(--gold-accent);
+        letter-spacing: 1.5px;
+        text-transform: uppercase;
+        font-weight: 600;
+      }
+
+      nav ul {
+        display: flex;
+        list-style: none;
+        gap: 30px;
+        align-items: center;
+      }
+
+      nav a {
+        font-size: 0.95rem;
+        font-weight: 500;
+        color: var(--dark-color);
+        transition: color 0.3s;
+      }
+
+      nav a:hover {
+        color: var(--primary-emerald);
+      }
+
+      .btn-official {
+        background: var(--primary-emerald);
+        color: var(--white) !important;
+        padding: 9px 22px;
+        border-radius: 25px;
+        font-weight: 600;
+        transition: all 0.3s ease;
+        box-shadow: 0 4px 12px rgba(11, 79, 58, 0.2);
+      }
+
+      .btn-official:hover {
+        background: var(--emerald-light);
+        transform: translateY(-2px);
+      }
+
+      /* ===================================
+           HERO SECTION
+           =================================== */
+      .hero {
+        position: relative;
+        min-height: 85vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        padding: 80px 20px;
+        background:
+          linear-gradient(
+            135deg,
+            rgba(11, 79, 58, 0.9) 0%,
+            rgba(22, 122, 91, 0.85) 100%
+          ),
+          url("https://images.unsplash.com/photo-1541829070764-84a7d30dd3f3?auto=format&fit=crop&w=1600&q=80")
+            center/cover no-repeat;
+        color: var(--white);
+      }
+
+      .hero-container {
+        max-width: 850px;
+        z-index: 2;
+      }
+
+      .hero-tag {
+        background: rgba(200, 157, 54, 0.25);
+        border: 1px solid var(--gold-accent);
+        color: var(--gold-light);
+        padding: 6px 20px;
+        border-radius: 30px;
+        font-size: 0.85rem;
+        font-weight: 600;
+        letter-spacing: 1.5px;
+        text-transform: uppercase;
+        display: inline-block;
+        margin-bottom: 25px;
+      }
+
+      .hero h2 {
+        font-size: 3.2rem;
+        line-height: 1.25;
+        margin-bottom: 20px;
+        font-weight: 700;
+      }
+
+      .hero p {
+        font-size: 1.15rem;
+        color: #e0f2ec;
+        margin-bottom: 35px;
+        font-weight: 300;
+      }
+
+      .hero-btns {
+        display: flex;
+        gap: 15px;
+        justify-content: center;
+        flex-wrap: wrap;
+      }
+
+      .btn-gold {
+        background: var(--gold-accent);
+        color: var(--dark-color);
+        padding: 14px 32px;
+        border-radius: 6px;
+        font-weight: 700;
+        transition: all 0.3s ease;
+      }
+
+      .btn-gold:hover {
+        background: #d8aa3f;
+        transform: translateY(-2px);
+        box-shadow: 0 6px 20px rgba(200, 157, 54, 0.4);
+      }
+
+      .btn-outline-white {
+        border: 2px solid var(--white);
+        color: var(--white);
+        padding: 12px 30px;
+        border-radius: 6px;
+        font-weight: 600;
+        transition: all 0.3s ease;
+      }
+
+      .btn-outline-white:hover {
+        background: var(--white);
+        color: var(--primary-emerald);
+        transform: translateY(-2px);
+      }
+
+      /* ===================================
+           FEATURES / ADVANTAGES
+           =================================== */
+      .features {
+        padding: 90px 7%;
+        max-width: 1250px;
+        margin: 0 auto;
+      }
+
+      .section-title {
+        text-align: center;
+        margin-bottom: 60px;
+      }
+
+      .section-title h2 {
+        font-size: 2.3rem;
+        color: var(--primary-emerald);
+        margin-bottom: 10px;
+      }
+
+      .section-title p {
+        color: var(--text-muted);
+        font-size: 1rem;
+      }
+
+      .grid-cards {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+        gap: 30px;
+      }
+
+      .card {
+        background: var(--white);
+        border-radius: 12px;
+        padding: 35px 25px;
+        border: 1px solid rgba(11, 79, 58, 0.08);
+        box-shadow: var(--card-shadow);
+        transition: all 0.3s ease;
+      }
+
+      .card:hover {
+        transform: translateY(-8px);
+        box-shadow: 0 15px 35px rgba(11, 79, 58, 0.12);
+        border-color: var(--gold-accent);
+      }
+
+      .card-icon {
+        width: 55px;
+        height: 55px;
+        background: var(--mint-bg);
+        color: var(--primary-emerald);
+        border-radius: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.6rem;
+        margin-bottom: 20px;
+      }
+
+      .card h3 {
+        font-size: 1.3rem;
+        color: var(--primary-emerald);
+        margin-bottom: 12px;
+      }
+
+      .card p {
+        font-size: 0.95rem;
+        color: var(--text-muted);
+        line-height: 1.6;
+      }
+
+      /* ===================================
+           FOOTER
+           =================================== */
+      footer {
+        background: var(--dark-color);
+        color: var(--white);
+        padding: 30px 20px;
+        text-align: center;
+        border-top: 4px solid var(--gold-accent);
+      }
+
+      footer p {
+        font-size: 0.9rem;
+        color: #a3b8b1;
+      }
+
+      footer p span {
+        color: var(--gold-accent);
+        font-weight: 600;
+      }
+
+      /* Responsive Layout */
+      @media (max-width: 768px) {
+        header {
+          flex-direction: column;
+          gap: 15px;
+          padding: 15px;
+        }
+        .hero h2 {
+          font-size: 2.2rem;
+        }
+        .hero p {
+          font-size: 1rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- NAVBAR -->
+    <header>
+      <div class="brand">
+        <div class="brand-logo">AR</div>
+        <div class="brand-text">
+          <h1>AR-RIDHO</h1>
+          <span>SENTUL BOGOR</span>
+        </div>
+      </div>
+      <nav>
+        <ul>
+          <li><a href="#beranda">Beranda</a></li>
+          <li><a href="#program">Program Utama</a></li>
+          <li>
+            <a
+              href="https://pesantren.arridhosentul.com/"
+              target="_blank"
+              class="btn-official"
+              >Website Resmi</a
+            >
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- HERO SECTION -->
+    <section class="hero" id="beranda">
+      <div class="hero-container">
+        <span class="hero-tag">Pondok Pesantren Modern</span>
+        <h2>Pondok Pesantren Modern Ar-Ridho Sentul</h2>
+        <p>
+          Membentuk pribadi Muslim yang berakhlak mulia, berwawasan luas,
+          cerdas, dan mandiri di kawasan asri Sentul, Bogor.
+        </p>
+        <div class="hero-btns">
+          <a
+            href="https://pesantren.arridhosentul.com/"
+            target="_blank"
+            class="btn-gold"
+            >Pendaftaran (PPDB)</a
+          >
+          <a href="#program" class="btn-outline-white">Lihat Keunggulan</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- FEATURES SECTION -->
+    <section class="features" id="program">
+      <div class="section-title">
+        <h2>Keunggulan Pendidikan</h2>
+        <p>
+          Sistem pengasuhan terpadu untuk membentuk karakter dan intelektual
+          santri secara optimal.
+        </p>
+      </div>
+
+      <div class="grid-cards">
+        <div class="card">
+          <div class="card-icon">🕌</div>
+          <h3>Kurikulum Terpadu</h3>
+          <p>
+            Mengintegrasikan pendidikan agama Islam yang mendalam dengan
+            kurikulum nasional secara seimbang.
+          </p>
+        </div>
+        <div class="card">
+          <div class="card-icon">💬</div>
+          <h3>Bahasa Asing Aktif</h3>
+          <p>
+            Pembiasaan berkomunikasi dalam Bahasa Arab dan Inggris secara aktif
+            dalam kehidupan sehari-hari santri.
+          </p>
+        </div>
+        <div class="card">
+          <div class="card-icon">📖</div>
+          <h3>Tahfiz Al-Qur'an</h3>
+          <p>
+            Program bimbingan hafalan Al-Qur'an terstruktur yang didampingi oleh
+            para pengajar berpengalaman.
+          </p>
+        </div>
+        <div class="card">
+          <div class="card-icon">🍃</div>
+          <h3>Lokasi Asri & Nyaman</h3>
+          <p>
+            Berada di kawasan Sentul yang sejuk, tenang, dan sangat mendukung
+            konsentrasi belajar para santri.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+      <p>
+        &copy; 2026 <span>Pondok Pesantren Modern Ar-Ridho</span> — Sentul,
+        Kabupaten Bogor.
+      </p>
+    </footer>
+  </body>
+</html>
