@@ -1,0 +1,333 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pesantren Terpadu Al Kahfi - Bogor</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <style>
+      /* ===================================
+           RESET & BASIC STYLES
+           =================================== */
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Poppins", sans-serif;
+      }
+
+      :root {
+        --primary-color: #0d5c3a;
+        --primary-light: #158052;
+        --accent-color: #d4af37;
+        --dark-color: #1a252c;
+        --light-color: #f4f7f6;
+        --white: #ffffff;
+      }
+
+      body {
+        background-color: var(--light-color);
+        color: var(--dark-color);
+        line-height: 1.6;
+      }
+
+      a {
+        text-decoration: none;
+        color: inherit;
+      }
+
+      /* ===================================
+           NAVIGATION BAR
+           =================================== */
+      header {
+        background-color: var(--primary-color);
+        color: var(--white);
+        padding: 1rem 5%;
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      .logo {
+        font-size: 1.5rem;
+        font-weight: 700;
+        letter-spacing: 1px;
+        color: var(--accent-color);
+      }
+
+      nav ul {
+        display: flex;
+        list-style: none;
+        gap: 20px;
+      }
+
+      nav a {
+        font-weight: 500;
+        transition: color 0.3s;
+      }
+
+      nav a:hover {
+        color: var(--accent-color);
+      }
+
+      .btn-ppdb {
+        background-color: var(--accent-color);
+        color: var(--dark-color);
+        padding: 8px 18px;
+        border-radius: 20px;
+        font-weight: 600;
+        transition: background 0.3s;
+      }
+
+      .btn-ppdb:hover {
+        background-color: #b89628;
+        color: var(--white);
+      }
+
+      /* ===================================
+           HERO SECTION
+           =================================== */
+      .hero {
+        background:
+          linear-gradient(rgba(13, 92, 58, 0.85), rgba(13, 92, 58, 0.85)),
+          url("https://images.unsplash.com/photo-1541829070764-84a7d30dd3f3?auto=format&fit=crop&w=1350&q=80")
+            center/cover no-repeat;
+        height: 80vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        color: var(--white);
+        padding: 0 20px;
+      }
+
+      .hero h1 {
+        font-size: 3rem;
+        margin-bottom: 15px;
+        font-weight: 700;
+      }
+
+      .hero p {
+        font-size: 1.2rem;
+        max-width: 600px;
+        margin-bottom: 25px;
+        font-weight: 300;
+      }
+
+      .hero-btns {
+        display: flex;
+        gap: 15px;
+      }
+
+      .btn-primary {
+        background-color: var(--accent-color);
+        color: var(--dark-color);
+        padding: 12px 30px;
+        border-radius: 5px;
+        font-weight: 600;
+        transition: 0.3s;
+      }
+
+      .btn-secondary {
+        border: 2px solid var(--white);
+        color: var(--white);
+        padding: 10px 28px;
+        border-radius: 5px;
+        font-weight: 600;
+        transition: 0.3s;
+      }
+
+      .btn-primary:hover {
+        background-color: var(--white);
+      }
+
+      .btn-secondary:hover {
+        background-color: var(--white);
+        color: var(--primary-color);
+      }
+
+      /* ===================================
+           PROGRAM / FEATURES
+           =================================== */
+      .features {
+        padding: 60px 5%;
+        text-align: center;
+      }
+
+      .section-title {
+        font-size: 2rem;
+        color: var(--primary-color);
+        margin-bottom: 10px;
+      }
+
+      .section-subtitle {
+        color: #666;
+        margin-bottom: 40px;
+      }
+
+      .grid-container {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 25px;
+      }
+
+      .card {
+        background: var(--white);
+        padding: 30px 20px;
+        border-radius: 8px;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+        transition:
+          transform 0.3s,
+          box-shadow 0.3s;
+      }
+
+      .card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+      }
+
+      .card-icon {
+        font-size: 2.5rem;
+        margin-bottom: 15px;
+      }
+
+      .card h3 {
+        margin-bottom: 10px;
+        color: var(--primary-color);
+      }
+
+      .card p {
+        font-size: 0.95rem;
+        color: #555;
+      }
+
+      /* ===================================
+           FOOTER
+           =================================== */
+      footer {
+        background-color: var(--dark-color);
+        color: var(--white);
+        text-align: center;
+        padding: 20px;
+        font-size: 0.9rem;
+      }
+
+      footer p span {
+        color: var(--accent-color);
+      }
+
+      /* Responsive Styles */
+      @media (max-width: 768px) {
+        header {
+          flex-direction: column;
+          gap: 15px;
+        }
+        .hero h1 {
+          font-size: 2rem;
+        }
+        .hero p {
+          font-size: 1rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- NAVBAR -->
+    <header>
+      <div class="logo">AL KAHFI</div>
+      <nav>
+        <ul>
+          <li><a href="#beranda">Beranda</a></li>
+          <li><a href="#profil">Profil</a></li>
+          <li><a href="#program">Program</a></li>
+          <li>
+            <a
+              href="https://pesantrenalkahfi.com/"
+              target="_blank"
+              class="btn-ppdb"
+              >Website Resmi</a
+            >
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- HERO SECTION -->
+    <section class="hero" id="beranda">
+      <h1>Pesantren Terpadu Al Kahfi</h1>
+      <p>
+        Mencetak generasi Rabbani yang berakhlak mulia, cerdas, berprestasi, dan
+        berwawasan global di Cigombong, Bogor.
+      </p>
+      <div class="hero-btns">
+        <a
+          href="https://pesantrenalkahfi.com/"
+          target="_blank"
+          class="btn-primary"
+          >Pendaftaran (PPDB)</a
+        >
+        <a href="#program" class="btn-secondary">Lihat Program</a>
+      </div>
+    </section>
+
+    <!-- FEATURES / PROGRAM SECTION -->
+    <section class="features" id="program">
+      <h2 class="section-title">Keunggulan Pesantren</h2>
+      <p class="section-subtitle">
+        Mengapa memilih Pesantren Terpadu Al Kahfi Bogor?
+      </p>
+
+      <div class="grid-container">
+        <div class="card">
+          <div class="card-icon">📖</div>
+          <h3>Tahfiz Al-Qur'an</h3>
+          <p>
+            Program bimbingan hafalan Al-Qur'an terstruktur dengan target
+            hafalan yang berkualitas dan mutqin.
+          </p>
+        </div>
+        <div class="card">
+          <div class="card-icon">🎓</div>
+          <h3>Kurikulum Terpadu</h3>
+          <p>
+            Mengkombinasikan kurikulum dinas pendidikan dan kurikulum pesantren
+            secara seimbang.
+          </p>
+        </div>
+        <div class="card">
+          <div class="card-icon">🌍</div>
+          <h3>Penguasaan Bahasa</h3>
+          <p>
+            Pembiasaan bahasa Arab dan Inggris secara aktif dalam kehidupan
+            sehari-hari santri.
+          </p>
+        </div>
+        <div class="card">
+          <div class="card-icon">🏡</div>
+          <h3>Lingkungan Asri</h3>
+          <p>
+            Berlokasi di kawasan Cigombong, Bogor yang sejuk, aman, dan sangat
+            kondusif untuk belajar.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+      <p>
+        &copy; 2026 <span>Pesantren Terpadu Al Kahfi</span> - Cigombong,
+        Kabupaten Bogor.
+      </p>
+    </footer>
+  </body>
+</html>
