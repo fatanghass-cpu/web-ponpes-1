@@ -1,0 +1,616 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pondok Pesantren Daaruttaqwa — Cibinong, Bogor</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <style>
+      /* ===================================
+           RESET & CORE DESIGN SYSTEM
+           =================================== */
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      :root {
+        --primary-navy: #0e2a47;
+        --secondary-blue: #1d4ed8;
+        --accent-gold: #c59b27;
+        --light-gold: #f9f3e3;
+        --bg-light: #f8fafc;
+        --surface-white: #ffffff;
+        --text-main: #0f172a;
+        --text-muted: #475569;
+        --border-light: #e2e8f0;
+        --shadow-sm: 0 2px 8px rgba(14, 42, 71, 0.04);
+        --shadow-md: 0 10px 30px rgba(14, 42, 71, 0.08);
+        --shadow-lg: 0 20px 40px rgba(14, 42, 71, 0.12);
+      }
+
+      html {
+        scroll-behavior: smooth;
+      }
+
+      body {
+        background-color: var(--bg-light);
+        color: var(--text-main);
+        font-family: "Plus Jakarta Sans", sans-serif;
+        line-height: 1.6;
+        overflow-x: hidden;
+      }
+
+      h1,
+      h2,
+      h3,
+      h4 {
+        font-family: "Cinzel", serif;
+      }
+
+      a {
+        text-decoration: none;
+        color: inherit;
+      }
+
+      /* ===================================
+           TOPBAR & HEADER
+           =================================== */
+      .topbar {
+        background-color: var(--primary-navy);
+        color: rgba(255, 255, 255, 0.85);
+        font-size: 0.825rem;
+        padding: 8px 8%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+      }
+
+      .topbar-info {
+        display: flex;
+        gap: 20px;
+      }
+
+      header {
+        background: rgba(255, 255, 255, 0.98);
+        backdrop-filter: blur(12px);
+        border-bottom: 1px solid var(--border-light);
+        padding: 1rem 8%;
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        box-shadow: var(--shadow-sm);
+      }
+
+      .brand-logo {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+      }
+
+      .logo-emblem {
+        width: 46px;
+        height: 46px;
+        background: var(--primary-navy);
+        color: var(--accent-gold);
+        border: 2px solid var(--accent-gold);
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: 700;
+        font-size: 1.1rem;
+        font-family: "Cinzel", serif;
+      }
+
+      .brand-text h1 {
+        font-size: 1.2rem;
+        color: var(--primary-navy);
+        font-weight: 700;
+        line-height: 1.1;
+      }
+
+      .brand-text span {
+        font-family: "Plus Jakarta Sans", sans-serif;
+        font-size: 0.725rem;
+        color: var(--accent-gold);
+        letter-spacing: 2px;
+        text-transform: uppercase;
+        font-weight: 600;
+        display: block;
+      }
+
+      nav ul {
+        display: flex;
+        list-style: none;
+        gap: 32px;
+        align-items: center;
+      }
+
+      nav a {
+        font-size: 0.9rem;
+        font-weight: 600;
+        color: var(--primary-navy);
+        transition: color 0.3s;
+      }
+
+      nav a:hover {
+        color: var(--accent-gold);
+      }
+
+      .btn-nav-ppdb {
+        background: var(--primary-navy);
+        color: white !important;
+        padding: 10px 22px;
+        border-radius: 4px;
+        font-weight: 600;
+        transition: all 0.3s ease;
+      }
+
+      .btn-nav-ppdb:hover {
+        background: var(--accent-gold);
+        transform: translateY(-2px);
+        box-shadow: var(--shadow-sm);
+      }
+
+      /* ===================================
+           HERO SECTION
+           =================================== */
+      .hero {
+        position: relative;
+        min-height: 88vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        padding: 100px 20px 80px;
+        background:
+          linear-gradient(
+            135deg,
+            rgba(14, 42, 71, 0.92) 0%,
+            rgba(29, 78, 216, 0.82) 100%
+          ),
+          url("https://images.unsplash.com/photo-1541829070764-84a7d30dd3f3?auto=format&fit=crop&w=1600&q=80")
+            center/cover no-repeat;
+        color: white;
+      }
+
+      .hero-container {
+        max-width: 900px;
+        z-index: 2;
+      }
+
+      .hero-badge {
+        background: rgba(197, 155, 39, 0.25);
+        border: 1px solid var(--accent-gold);
+        color: var(--light-gold);
+        padding: 6px 22px;
+        border-radius: 30px;
+        font-size: 0.8rem;
+        font-weight: 600;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+        display: inline-block;
+        margin-bottom: 25px;
+      }
+
+      .hero h2 {
+        font-size: 3.5rem;
+        line-height: 1.2;
+        margin-bottom: 20px;
+        font-weight: 700;
+      }
+
+      .hero p {
+        font-size: 1.15rem;
+        color: #e2e8f0;
+        margin-bottom: 40px;
+        font-weight: 300;
+        max-width: 750px;
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      .hero-btns {
+        display: flex;
+        gap: 18px;
+        justify-content: center;
+        flex-wrap: wrap;
+      }
+
+      .btn-primary-gold {
+        background: var(--accent-gold);
+        color: var(--primary-navy);
+        padding: 15px 36px;
+        border-radius: 4px;
+        font-weight: 700;
+        font-size: 0.9rem;
+        transition: all 0.3s ease;
+      }
+
+      .btn-primary-gold:hover {
+        background: #d8a92a;
+        transform: translateY(-2px);
+        box-shadow: 0 8px 20px rgba(197, 155, 39, 0.4);
+      }
+
+      .btn-outline-hero {
+        border: 2px solid white;
+        color: white;
+        padding: 13px 32px;
+        border-radius: 4px;
+        font-weight: 600;
+        font-size: 0.9rem;
+        transition: all 0.3s ease;
+      }
+
+      .btn-outline-hero:hover {
+        background: white;
+        color: var(--primary-navy);
+        transform: translateY(-2px);
+      }
+
+      /* ===================================
+           STATS BAR
+           =================================== */
+      .stats-bar {
+        background: var(--surface-white);
+        margin: -50px auto 0;
+        max-width: 1100px;
+        border-radius: 8px;
+        padding: 35px 40px;
+        box-shadow: var(--shadow-lg);
+        position: relative;
+        z-index: 10;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 20px;
+        text-align: center;
+        border: 1px solid var(--border-light);
+      }
+
+      .stat-item h3 {
+        font-size: 2.2rem;
+        color: var(--primary-navy);
+        margin-bottom: 5px;
+        font-weight: 700;
+      }
+
+      .stat-item p {
+        color: var(--text-muted);
+        font-size: 0.875rem;
+        font-weight: 500;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+      }
+
+      /* ===================================
+           SECTION STYLES
+           =================================== */
+      section {
+        padding: 90px 8%;
+      }
+
+      .section-header {
+        text-align: center;
+        margin-bottom: 60px;
+      }
+
+      .section-header .sub-title {
+        color: var(--accent-gold);
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        font-size: 0.8rem;
+        display: block;
+        margin-bottom: 8px;
+      }
+
+      .section-header h2 {
+        font-size: 2.4rem;
+        color: var(--primary-navy);
+        margin-bottom: 12px;
+      }
+
+      .section-header .divider {
+        width: 60px;
+        height: 3px;
+        background: var(--accent-gold);
+        margin: 0 auto;
+      }
+
+      /* ===================================
+           PROGRAMS & PILAR
+           =================================== */
+      .programs-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+        gap: 30px;
+      }
+
+      .program-card {
+        background: var(--surface-white);
+        border-radius: 8px;
+        border: 1px solid var(--border-light);
+        padding: 40px 30px;
+        transition: all 0.3s ease;
+        position: relative;
+        overflow: hidden;
+      }
+
+      .program-card::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 4px;
+        background: var(--primary-navy);
+        transition: background 0.3s;
+      }
+
+      .program-card:hover {
+        transform: translateY(-8px);
+        box-shadow: var(--shadow-md);
+      }
+
+      .program-card:hover::before {
+        background: var(--accent-gold);
+      }
+
+      .program-card h3 {
+        font-size: 1.3rem;
+        color: var(--primary-navy);
+        margin-bottom: 15px;
+      }
+
+      .program-card p {
+        color: var(--text-muted);
+        font-size: 0.95rem;
+        line-height: 1.7;
+      }
+
+      /* ===================================
+           FOOTER
+           =================================== */
+      footer {
+        background: var(--primary-navy);
+        color: white;
+        padding: 80px 8% 30px;
+      }
+
+      .footer-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+        gap: 40px;
+        margin-bottom: 60px;
+      }
+
+      .footer-col h4 {
+        font-size: 1.1rem;
+        color: var(--accent-gold);
+        margin-bottom: 20px;
+      }
+
+      .footer-col p,
+      .footer-col li {
+        color: #94a3b8;
+        font-size: 0.9rem;
+        margin-bottom: 12px;
+        list-style: none;
+      }
+
+      .footer-col a:hover {
+        color: white;
+      }
+
+      .footer-bottom {
+        border-top: 1px solid rgba(255, 255, 255, 0.1);
+        padding-top: 30px;
+        text-align: center;
+        font-size: 0.85rem;
+        color: #64748b;
+      }
+
+      .footer-bottom span {
+        color: var(--accent-gold);
+      }
+
+      /* Responsive Layout */
+      @media (max-width: 768px) {
+        .topbar {
+          display: none;
+        }
+        header {
+          flex-direction: column;
+          gap: 15px;
+          padding: 15px;
+        }
+        nav ul {
+          gap: 15px;
+          flex-wrap: wrap;
+          justify-content: center;
+        }
+        .hero h2 {
+          font-size: 2.2rem;
+        }
+        .hero p {
+          font-size: 1rem;
+        }
+        .stats-bar {
+          margin-top: 0;
+          border-radius: 0;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- TOPBAR -->
+    <div class="topbar">
+      <div class="topbar-info">
+        <span>📍 Cibinong, Kabupaten Bogor, Jawa Barat</span>
+        <span>📞 (021) 875-XXX</span>
+      </div>
+      <div>
+        <span>✉️ info@daaruttaqwa.sch.id</span>
+      </div>
+    </div>
+
+    <!-- NAVBAR -->
+    <header>
+      <div class="brand-logo">
+        <div class="logo-emblem">DT</div>
+        <div class="brand-text">
+          <h1>DAARUTTAQWA</h1>
+          <span>CIBINONG BOGOR</span>
+        </div>
+      </div>
+      <nav>
+        <ul>
+          <li><a href="#beranda">Beranda</a></li>
+          <li><a href="#program">Program Pendidikan</a></li>
+          <li><a href="#keunggulan">Keunggulan</a></li>
+          <li>
+            <a
+              href="https://daaruttaqwa.sch.id/"
+              target="_blank"
+              class="btn-nav-ppdb"
+              >Website Resmi</a
+            >
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- HERO SECTION -->
+    <section class="hero" id="beranda">
+      <div class="hero-container">
+        <span class="hero-badge">Pondok Pesantren Modern</span>
+        <h2>Pondok Pesantren Daaruttaqwa</h2>
+        <p>
+          Mencetak generasi yang bertaqwa, berakhlak mulia, berilmu luas, dan
+          siap memimpin masa depan dengan landasan Al-Qur'an dan As-Sunnah.
+        </p>
+        <div class="hero-btns">
+          <a
+            href="https://daaruttaqwa.sch.id/"
+            target="_blank"
+            class="btn-primary-gold"
+            >Pendaftaran Santri Baru</a
+          >
+          <a href="#program" class="btn-outline-hero">Pelajari Program</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- STATS BAR -->
+    <div class="stats-bar">
+      <div class="stat-item">
+        <h3>Terpadu</h3>
+        <p>Kurikulum Nasional & Agama</p>
+      </div>
+      <div class="stat-item">
+        <h3>Tahfiz</h3>
+        <p>Program Al-Qur'an</p>
+      </div>
+      <div class="stat-item">
+        <h3>Karakter</h3>
+        <p>Pembinaan Akhlak</p>
+      </div>
+      <div class="stat-item">
+        <h3>Cibinong</h3>
+        <p>Lokasi Strategis</p>
+      </div>
+    </div>
+
+    <!-- PROGRAM PENDIDIKAN -->
+    <section id="program">
+      <div class="section-header">
+        <span class="sub-title">Fokus Pendidikan</span>
+        <h2>Program Unggulan</h2>
+        <div class="divider"></div>
+      </div>
+
+      <div class="programs-grid">
+        <div class="program-card">
+          <h3>Pendidikan Formal Terpadu</h3>
+          <p>
+            Mengintegrasikan kurikulum nasional dengan pendidikan keagamaan
+            terstruktur untuk melahirkan santri unggul akademis dan spiritual.
+          </p>
+        </div>
+        <div class="program-card">
+          <h3>Tahfiz & Tahsin Al-Qur'an</h3>
+          <p>
+            Bimbingan intensif membaca dan menghafal Al-Qur'an secara tartil
+            serta mutqin dengan pengawasan ustaz yang berpengalaman.
+          </p>
+        </div>
+        <div class="program-card">
+          <h3>Penguasaan Bahasa Asing</h3>
+          <p>
+            Program pembiasaan komunikasi sehari-hari menggunakan Bahasa Arab
+            dan Inggris di lingkungan pesantren.
+          </p>
+        </div>
+        <div class="program-card">
+          <h3>Pengembangan Karakter & Kepemimpinan</h3>
+          <p>
+            Pembentukan sikap mandiri, disiplin, dan berjiwa kepemimpinan
+            melalui berbagai kegiatan ekstrakurikuler serta keorganisasian
+            santri.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+      <div class="footer-grid">
+        <div class="footer-col">
+          <h4>Pesantren Daaruttaqwa</h4>
+          <p>
+            Lembaga pendidikan Islam modern yang berdedikasi tinggi dalam
+            mendidik generasi bertaqwa, berakhlak mulia, dan berwawasan global.
+          </p>
+        </div>
+        <div class="footer-col">
+          <h4>Navigasi</h4>
+          <ul>
+            <li><a href="#beranda">Beranda</a></li>
+            <li><a href="#program">Program Pendidikan</a></li>
+            <li>
+              <a href="https://daaruttaqwa.sch.id/" target="_blank"
+                >Website Resmi</a
+              >
+            </li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Lokasi & Kontak</h4>
+          <p>Kecamatan Cibinong, Kabupaten Bogor, Jawa Barat</p>
+          <p>Email: info@daaruttaqwa.sch.id</p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>
+          &copy; 2026 <span>Pondok Pesantren Daaruttaqwa</span> — Cibinong,
+          Kabupaten Bogor. All Rights Reserved.
+        </p>
+      </div>
+    </footer>
+  </body>
+</html>
