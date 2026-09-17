@@ -1,0 +1,428 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pesantren Modern Ummul Quro Al-Islami - Bogor</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <style>
+      /* ===================================
+           RESET & CORE VARIABLES
+           =================================== */
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Plus Jakarta Sans", sans-serif;
+      }
+
+      :root {
+        --primary-green: #0a4d3c;
+        --emerald-green: #12745b;
+        --soft-mint: #e8f5f1;
+        --gold-accent: #d4af37;
+        --gold-hover: #b89428;
+        --dark-charcoal: #1c2526;
+        --body-bg: #f8faf9;
+        --card-white: #ffffff;
+      }
+
+      body {
+        background-color: var(--body-bg);
+        color: var(--dark-charcoal);
+        line-height: 1.6;
+      }
+
+      a {
+        text-decoration: none;
+        color: inherit;
+      }
+
+      /* ===================================
+           NAVIGATION
+           =================================== */
+      header {
+        background-color: var(--primary-green);
+        color: white;
+        padding: 1.2rem 6%;
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.12);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      .brand-logo {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+      }
+
+      .brand-logo .symbol {
+        width: 40px;
+        height: 40px;
+        background: var(--gold-accent);
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-family: "Cinzel", serif;
+        font-weight: 700;
+        color: var(--primary-green);
+        font-size: 1.2rem;
+      }
+
+      .brand-logo .title {
+        font-family: "Cinzel", serif;
+        font-size: 1.2rem;
+        font-weight: 700;
+        letter-spacing: 0.5px;
+        color: white;
+      }
+
+      .brand-logo .title span {
+        color: var(--gold-accent);
+      }
+
+      nav ul {
+        display: flex;
+        list-style: none;
+        gap: 25px;
+        align-items: center;
+      }
+
+      nav a {
+        font-size: 0.95rem;
+        font-weight: 500;
+        transition: color 0.3s;
+      }
+
+      nav a:hover {
+        color: var(--gold-accent);
+      }
+
+      .btn-visit {
+        background-color: var(--gold-accent);
+        color: var(--primary-green);
+        padding: 9px 20px;
+        border-radius: 30px;
+        font-weight: 700;
+        font-size: 0.9rem;
+        transition: all 0.3s ease;
+      }
+
+      .btn-visit:hover {
+        background-color: white;
+        color: var(--primary-green);
+        transform: translateY(-2px);
+      }
+
+      /* ===================================
+           HERO SECTION
+           =================================== */
+      .hero {
+        background:
+          linear-gradient(
+            135deg,
+            rgba(10, 77, 60, 0.92),
+            rgba(18, 116, 91, 0.88)
+          ),
+          url("https://images.unsplash.com/photo-1590076175571-4b5459efb08c?auto=format&fit=crop&w=1400&q=80")
+            center/cover no-repeat;
+        min-height: 85vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        color: white;
+        padding: 60px 20px;
+      }
+
+      .hero-badge {
+        background: rgba(212, 175, 55, 0.2);
+        border: 1px solid var(--gold-accent);
+        color: var(--gold-accent);
+        padding: 6px 18px;
+        border-radius: 20px;
+        font-size: 0.85rem;
+        font-weight: 600;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+        margin-bottom: 20px;
+      }
+
+      .hero h1 {
+        font-family: "Cinzel", serif;
+        font-size: 3.2rem;
+        line-height: 1.2;
+        max-width: 900px;
+        margin-bottom: 20px;
+      }
+
+      .hero p {
+        font-size: 1.15rem;
+        max-width: 680px;
+        margin-bottom: 35px;
+        color: #e0f2ed;
+        font-weight: 300;
+      }
+
+      .hero-actions {
+        display: flex;
+        gap: 15px;
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+
+      .btn-main {
+        background-color: var(--gold-accent);
+        color: var(--primary-green);
+        padding: 14px 32px;
+        border-radius: 6px;
+        font-weight: 700;
+        transition: all 0.3s;
+        box-shadow: 0 4px 15px rgba(212, 175, 55, 0.3);
+      }
+
+      .btn-outline {
+        border: 2px solid white;
+        color: white;
+        padding: 12px 30px;
+        border-radius: 6px;
+        font-weight: 600;
+        transition: all 0.3s;
+      }
+
+      .btn-main:hover {
+        background-color: white;
+        color: var(--primary-green);
+        transform: translateY(-3px);
+      }
+
+      .btn-outline:hover {
+        background-color: white;
+        color: var(--primary-green);
+        transform: translateY(-3px);
+      }
+
+      /* ===================================
+           FEATURES / PROGRAM SECTION
+           =================================== */
+      .features {
+        padding: 80px 6%;
+        max-width: 1200px;
+        margin: 0 auto;
+      }
+
+      .section-header {
+        text-align: center;
+        margin-bottom: 50px;
+      }
+
+      .section-header h2 {
+        font-family: "Cinzel", serif;
+        font-size: 2.2rem;
+        color: var(--primary-green);
+        margin-bottom: 10px;
+      }
+
+      .section-header p {
+        color: #666;
+        font-size: 1rem;
+      }
+
+      .grid-container {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+        gap: 30px;
+      }
+
+      .card {
+        background: var(--card-white);
+        border-radius: 12px;
+        padding: 35px 25px;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.04);
+        border: 1px solid #eef2f1;
+        transition: all 0.3s ease;
+        position: relative;
+        overflow: hidden;
+      }
+
+      .card::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 4px;
+        background: var(--gold-accent);
+        opacity: 0;
+        transition: opacity 0.3s;
+      }
+
+      .card:hover {
+        transform: translateY(-8px);
+        box-shadow: 0 15px 35px rgba(10, 77, 60, 0.1);
+      }
+
+      .card:hover::before {
+        opacity: 1;
+      }
+
+      .card-icon {
+        width: 55px;
+        height: 55px;
+        background-color: var(--soft-mint);
+        color: var(--emerald-green);
+        border-radius: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.6rem;
+        margin-bottom: 20px;
+      }
+
+      .card h3 {
+        font-size: 1.25rem;
+        color: var(--primary-green);
+        margin-bottom: 12px;
+        font-weight: 700;
+      }
+
+      .card p {
+        font-size: 0.95rem;
+        color: #5a6e69;
+        line-height: 1.6;
+      }
+
+      /* ===================================
+           FOOTER
+           =================================== */
+      footer {
+        background-color: var(--primary-green);
+        color: white;
+        padding: 30px 20px;
+        text-align: center;
+        font-size: 0.9rem;
+        border-top: 3px solid var(--gold-accent);
+      }
+
+      footer p span {
+        color: var(--gold-accent);
+        font-weight: 600;
+      }
+
+      /* Responsive Layout */
+      @media (max-width: 768px) {
+        header {
+          flex-direction: column;
+          gap: 15px;
+          padding: 15px;
+        }
+        .hero h1 {
+          font-size: 2.2rem;
+        }
+        .hero p {
+          font-size: 1rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- NAVBAR -->
+    <header>
+      <div class="brand-logo">
+        <div class="symbol">UQ</div>
+        <div class="title">Ummul Quro <span>Al-Islami</span></div>
+      </div>
+      <nav>
+        <ul>
+          <li><a href="#beranda">Beranda</a></li>
+          <li><a href="#keunggulan">Keunggulan</a></li>
+          <li>
+            <a href="https://pmuqi.com/" target="_blank" class="btn-visit"
+              >Website Resmi</a
+            >
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- HERO SECTION -->
+    <section class="hero" id="beranda">
+      <div class="hero-badge">Pondok Pesantren Modern</div>
+      <h1>Pondok Pesantren Modern Ummul Quro Al-Islami</h1>
+      <p>
+        Mencetak kader pemimpin umat yang berakhlakul karimah, berpengetahuan
+        luas, serta unggul dalam ilmu keislaman dan bahasa di Leuwiliang, Bogor.
+      </p>
+      <div class="hero-actions">
+        <a href="https://pmuqi.com/" target="_blank" class="btn-main"
+          >Pendaftaran & Informasi (PMB)</a
+        >
+        <a href="#keunggulan" class="btn-outline">Pelajari Keunggulan</a>
+      </div>
+    </section>
+
+    <!-- FEATURES SECTION -->
+    <section class="features" id="keunggulan">
+      <div class="section-header">
+        <h2>Nilai Utama Pesantren</h2>
+        <p>
+          Pendidikan berintegritas untuk mencetak santri yang siap menghadapi
+          tantangan zaman.
+        </p>
+      </div>
+
+      <div class="grid-container">
+        <div class="card">
+          <div class="card-icon">📚</div>
+          <h3>Pendidikan Khas Modern</h3>
+          <p>
+            Menerapkan sistem pendidikan pesantren modern yang mengintegrasikan
+            ilmu keagamaan mendalam dan pengetahuan umum.
+          </p>
+        </div>
+        <div class="card">
+          <div class="card-icon">💬</div>
+          <h3>Penguasaan Dwi-Bahasa</h3>
+          <p>
+            Pembiasaan bahasa Arab dan Inggris secara aktif melalui disiplin
+            berbahasa sehari-hari di lingkungan pesantren.
+          </p>
+        </div>
+        <div class="card">
+          <div class="card-icon">🕌</div>
+          <h3>Pembinaan Akhlak & Karakter</h3>
+          <p>
+            Menanamkan kedisiplinan, kemandirian, kemuliaan akhlak, dan
+            kepemimpinan dalam setiap aspek aktivitas santri.
+          </p>
+        </div>
+        <div class="card">
+          <div class="card-icon">🌿</div>
+          <h3>Kawasan Asri & Kondusif</h3>
+          <p>
+            Terletak di Leuwiliang, Bogor dengan suasana yang tenang dan alami,
+            sangat mendukung kenyamanan proses belajar.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+      <p>
+        &copy; 2026 <span>Pondok Pesantren Modern Ummul Quro Al-Islami</span> —
+        Leuwiliang, Kabupaten Bogor.
+      </p>
+    </footer>
+  </body>
+</html>
